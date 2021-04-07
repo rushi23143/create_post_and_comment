@@ -1,0 +1,31 @@
+{% load static %}
+{% block body %}
+<div class="container" style="margin-top:30px">
+    <h2 class="text-center">Users</h2>
+    <br><br><br>
+    <table id="example" class="table table-hover " style="width: 1300px;">
+        <thead>
+        <tr>
+            <th width="400">user_id</th>
+            <th>user image</th>
+            <th>User title</th>
+            <th>User description</th>
+            <th>User posted_date</th>
+            <th>User good_name</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in blogss %}
+        <tr>
+            <td>{{i.user_id}}</td>
+            <td>{{i.image}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.posted_date}}</td>
+            <td>{{i.good_name}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

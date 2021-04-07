@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <title>Facebook login Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <center>
+<br><br>
+{% for message in messages %}
+<h3 style="color: orange, font-weight: bold; margin-left: 600px; border: 1px; border-radius:15px; background: grey; width: 400px;" class="text-center">{{message}}</h3>
+{% endfor %}
+<form method="post">
+  {% csrf_token %}
+<div class="wrapper">
+  <div class="btn">
+    <button id="button1" type="submit" name="button" value="admin">ADMIN</button>
+  </div>
+</div>
+<br>
+<div class="wrapper">
+  <div class="btn1">
+    <button id="button2" type="submit" name="button" value="user">USER</button>
+  </div>
+</div>
+</form>
+</center>
+</body>
+</html>

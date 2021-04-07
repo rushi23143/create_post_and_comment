@@ -1,0 +1,27 @@
+{% load static %}
+{% block body %}
+<div class="container" style="margin-top:30px">
+    <h2 class="text-center">Users</h2>
+    <br><br><br>
+    <table id="example" class="table table-hover " style="width: 1300px;">
+        <thead>
+        <tr>
+            <th width="400">request_from</th>
+            <th>User request_to</th>
+            <th>User first_name</th>
+            <th>User last_name</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in frndrequest %}
+        <tr>
+            <td>{{i.request_from}}</td>
+            <td>{{i.request_to}}</td>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
